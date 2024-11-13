@@ -11,7 +11,7 @@ function App() {
   const [cart, setCart] = useState([]);
   // Fetch clothes data from json-server
   useEffect(() => {
-    fetch('http://localhost:3001/clothes')
+    fetch('http://localhost:3000/clothes')
       .then((response) => response.json())
       .then((data) => setClothes(data))
       .catch((error) => console.error("Error fetching clothes: ", error));

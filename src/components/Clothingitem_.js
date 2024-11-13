@@ -16,5 +16,3 @@ function ClothingItem({ item, addToCart }) {
 }
 
 export default ClothingItem;
-
-
