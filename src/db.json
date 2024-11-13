@@ -1,0 +1,274 @@
+{
+    "clothes": [
+        {
+            "id": 1,
+            "name": "Basic White T-Shirt",
+            "price": 15,
+            "size": "M",
+            "gender": "Men",
+            "stock": 10,
+            "description": "A comfortable basic white t-shirt.",
+            "image": "https://jayblancofficial.com/wp-content/uploads/2021/09/T-Shirt-Flat-White-Basic.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Graphic T-Shirt",
+            "price": 20,
+            "size": "L",
+            "gender": "Men",
+            "stock": 5,
+            "description": "Stylish graphic design on a casual t-shirt.",
+            "image": "https://cdn.media.amplience.net/i/mrpricegroup/01_100996599_SI_00?$preset$&w=320"
+        },
+        {
+            "id": 3,
+            "name": "Black Slim Fit T-Shirt",
+            "price": 18,
+            "size": "S",
+            "gender": "Men",
+            "stock": 8,
+            "description": "A slim fit black t-shirt perfect for layering.",
+            "image": "https://www.frankandoak.com/cdn/shop/files/1120786-002.7917_2400x.jpg?v=1690986329"
+        },
+        {
+            "id": 4,
+            "name": "Striped Casual T-Shirt",
+            "price": 22,
+            "size": "M",
+            "gender": "Men",
+            "stock": 7,
+            "description": "Casual striped t-shirt for everyday wear.",
+            "image": "https://godevil.in/cdn/shop/files/Godevil16-2024shoot03780.jpg?v=1727531167"
+        },
+        {
+            "id": 5,
+            "name": "Vintage Print T-Shirt",
+            "price": 25,
+            "size": "L",
+            "gender": "Men",
+            "stock": 4,
+            "description": "A t-shirt with a retro vintage print.",
+            "image": "https://www.lezhougarment.com/wp-content/uploads/2023/02/Custom-printed-unisex-T-shirt-with-vintage-stone-wash-distressed-6-1.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Grey Melange T-Shirt",
+            "price": 17,
+            "size": "XL",
+            "gender": "Men",
+            "stock": 6,
+            "description": "Simple grey t-shirt for any occasion.",
+            "image": "https://www.americancrew.in/cdn/shop/files/B0B529BR4L_1_M.jpg?v=1682768300"
+        },
+        {
+            "id": 7,
+            "name": "Blue Denim T-Shirt",
+            "price": 28,
+            "size": "M",
+            "gender": "Men",
+            "stock": 3,
+            "description": "A denim style t-shirt with a rugged look.",
+            "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/t-shirt/0/w/z/xl-vots1648-voi-jeans-original-imagn9zex7htbene.jpeg?q=90&crop=false"
+        },
+        {
+            "id": 8,
+            "name": "Floral Print T-Shirt",
+            "price": 18,
+            "size": "S",
+            "gender": "Women",
+            "stock": 10,
+            "description": "A cute floral print t-shirt for spring.",
+            "image": "https://imagescdn.simons.ca/images/16523-24112200-19-A1_2/floral-print-loose-t-shirt.jpg?__=2"
+        },
+        {
+            "id": 9,
+            "name": "Pink V-Neck T-Shirt",
+            "price": 22,
+            "size": "M",
+            "gender": "Women",
+            "stock": 8,
+            "description": "A soft pink t-shirt with a v-neck cut.",
+            "image": "https://cdn.longtallsally.com/Images/ProductImages/eb1e414f-25cd-41_352579_A.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Tie-Dye T-Shirt",
+            "price": 25,
+            "size": "L",
+            "gender": "Women",
+            "stock": 6,
+            "description": "A trendy tie-dye t-shirt for casual looks.",
+            "image": "https://img01.ztat.net/article/spp-media-p1/3dbd90908c434b7a89bbd7cde90dfed7/6c7fe8aa7f994532ae5229372b65099f.jpg?imwidth=1800"
+        },
+        {
+            "id": 11,
+            "name": "Black Crop T-Shirt",
+            "price": 20,
+            "size": "S",
+            "gender": "Women",
+            "stock": 4,
+            "description": "A trendy black crop top for stylish looks.",
+            "image": "https://cdn-img.prettylittlething.com/3/4/8/a/348af164797a182ba6a479259223326ad9692cf6_cms8190_4.jpg?imwidth=600"
+        },
+        {
+            "id": 12,
+            "name": "White Oversized T-Shirt",
+            "price": 19,
+            "size": "L",
+            "gender": "Women",
+            "stock": 9,
+            "description": "An oversized white t-shirt for relaxed styling.",
+            "image": "https://public.assets.hmgroup.com/assets/003/23/25/2325d5b0fae1c94d6f9ed3eb45a7c5900dd42393_xl-1.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Striped Boat Neck T-Shirt",
+            "price": 23,
+            "size": "M",
+            "gender": "Women",
+            "stock": 5,
+            "description": "A nautical-inspired striped boat neck t-shirt.",
+            "image": "https://www.jcrew.com/s7-img-facade/BY293_YD1396_m?hei=2000&crop=0,0,1600,0"
+        },
+        {
+            "id": 14,
+            "name": "Slim Fit Blue Jeans",
+            "price": 40,
+            "size": "32",
+            "gender": "Unisex",
+            "stock": 12,
+            "description": "Classic slim fit blue jeans for all occasions.",
+            "image": "https://www.angeljackets.com/product_images/d/653/mens-straight-le-jeans-blue__85330_zoom.webp"
+        },
+        {
+            "id": 15,
+            "name": "Black Skinny Jeans",
+            "price": 35,
+            "size": "30",
+            "gender": "Unisex",
+            "stock": 8,
+            "description": "Stretchy black skinny jeans for a sleek fit.",
+            "image": "https://www.terranovastyle.com/media/catalog/product/cache/b4926abf2725ae7c77d8031e1c694fa1/s/a/b/0/SAB0067180001S415_det_1_07040515.jpg"
+        },
+        {
+            "id": 16,
+            "name": "Light Wash Straight Leg Jeans",
+            "price": 38,
+            "size": "34",
+            "gender": "Unisex",
+            "stock": 10,
+            "description": "Comfortable straight-leg jeans with a light wash.",
+            "image": "https://www.pippaandpearl.com/cdn/shop/products/light_wash_straight_leg_jeans_denim2.jpg?v=1672980615&width=1090"
+        },
+        {
+            "id": 17,
+            "name": "High-Waisted Mom Jeans",
+            "price": 45,
+            "size": "28",
+            "gender": "Women",
+            "stock": 6,
+            "description": "Retro-inspired high-waisted mom jeans.",
+            "image": "https://media.6media.me/media/catalog/product/g/z/gzz54997_light-blue_xl.jpg"
+        },
+        {
+            "id": 18,
+            "name": "Ripped Blue Jeans",
+            "price": 50,
+            "size": "32",
+            "gender": "Unisex",
+            "stock": 4,
+            "description": "Trendy ripped blue jeans with a distressed look.",
+            "image": "https://lahaute.com.au/cdn/shop/files/preview_images/d1ce1ec2301144788a06a9b31ab8bff5.thumbnail.0000000000.jpg?v=1690163564&width=600"
+        },
+        {
+            "id": 19,
+            "name": "Bootcut Dark Jeans",
+            "price": 55,
+            "size": "36",
+            "gender": "Men",
+            "stock": 7,
+            "description": "Stylish bootcut dark jeans for a timeless fit.",
+            "image": "https://products.blains.com/600/152/1524846.jpg"
+        },
+        {
+            "id": 20,
+            "name": "Wide Leg Jeans",
+            "price": 60,
+            "size": "30",
+            "gender": "Women",
+            "stock": 5,
+            "description": "Chic wide leg jeans for a comfortable fit.",
+            "image": "https://www.denim600.com/cdn/shop/files/44.webp?v=1709036942"
+        },
+        {
+            "id": 21,
+            "name": "Floral Summer Dress",
+            "price": 45,
+            "size": "M",
+            "gender": "Women",
+            "stock": 7,
+            "description": "A beautiful floral dress for warm summer days.",
+            "image": "https://www.boredbox.co.za/wp-content/uploads/2024/02/Angelique-Belted-Strappy-Knee-Length-Floral-Summer-Dress-1-1-scaled-1.jpg"
+        },
+        {
+            "id": 22,
+            "name": "Black Evening Dress",
+            "price": 75,
+            "size": "S",
+            "gender": "Women",
+            "stock": 3,
+            "description": "Elegant black dress for evening events.",
+            "image": "https://images-eu.ssl-images-amazon.com/images/I/51yI6WYjFpL._AC_SR462,693_.jpg"
+        },
+        {
+            "id": 23,
+            "name": "Denim Mini Dress",
+            "price": 50,
+            "size": "L",
+            "gender": "Women",
+            "stock": 5,
+            "description": "Trendy denim mini dress for casual outings.",
+            "image": "https://ajeworld.co.nz/cdn/shop/products/22CO5098_90S-WSH_1.jpg?v=1710724422"
+        },
+        {
+            "id": 24,
+            "name": "Casual Day Dress",
+            "price": 40,
+            "size": "M",
+            "gender": "Women",
+            "stock": 9,
+            "description": "Comfortable day dress for everyday wear.",
+            "image": "https://calvinklein.scene7.com/is/image/CalvinKlein/18801480_100_main"
+        },
+        {
+            "id": 25,
+            "name": "Boho Chic Maxi Dress",
+            "price": 65,
+            "size": "M",
+            "gender": "Women",
+            "stock": 4,
+            "description": "A boho-inspired maxi dress for a relaxed look.",
+            "image": "https://i5.walmartimages.com/asr/d18e2641-04d6-4b70-8b1e-4fccff2af7ac.dc814e1830611812d322e28b8b23f29d.jpeg"
+        },
+        {
+            "id": 26,
+            "name": "Grey Hoodie",
+            "price": 40,
+            "size": "M",
+            "gender": "Unisex",
+            "stock": 8,
+            "description": "A classic grey hoodie for warmth and comfort.",
+            "image": "https://cdn.shopify.com/s/files/1/1367/5201/files/CrestOversizedHoodieGSLightGreyMarlA5A8O-GCHR-1625.jpg?v=1709107948"
+        },
+        {
+            "id": 27,
+            "name": "Black Zip Hoodie",
+            "price": 45,
+            "size": "L",
+            "gender": "Unisex",
+            "stock": 5,
+            "description": "A stylish black zip-up hoodie for a modern look.",
+            "image": "https://cdn-img.prettylittlething.com/2/b/1/0/2b10723d7fdd4f66edde3e40a478b9729e5e84a7_cng1260_1.jpg?imwidth=600"
+        }
+    ]
+}
