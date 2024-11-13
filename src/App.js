@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -8,7 +9,6 @@ import './components/Navbar.css';
 function App() {
   const [clothes, setClothes] = useState([]);
   const [cart, setCart] = useState([]);
-  
   // Fetch clothes data from json-server
   useEffect(() => {
     fetch('http://localhost:3001/clothes')
