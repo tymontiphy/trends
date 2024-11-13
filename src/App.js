@@ -54,7 +54,7 @@ function App() {
             path="/"
             element={
               <div>
-                <h2>Trendy Clothes</h2>
+                <h2>Trending Clothes</h2>
                 <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                   {clothes.map((item) => (
                     <ClothingItem key={item.id} item={item} addToCart={addToCart} />
