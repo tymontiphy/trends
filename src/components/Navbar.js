@@ -36,9 +36,9 @@ function Navbar({ setSearchQuery, setSizeFilter, setPriceFilter, setGenderFilter
     <input type="range" min="0" max="100" onChange={handlePriceChange} />
   </label>
 
-  <Link to="/cart">
+  {/* <Link to="/cart">
     Cart ({cart.length})
-  </Link>
+  </Link> */}
 </nav>
   );
 }
