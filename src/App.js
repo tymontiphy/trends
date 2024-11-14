@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ClothingItem from './components/Clothingitem';
-import CartPage from './components/Cartpage';
 import "./components/Navbar.css"
 
 function App() {
@@ -80,10 +79,6 @@ return matchesSearchQuery && matchesSize && matchesGender && matchesPrice;
         </div>
       </div>
     }
-  />
-  <Route
-    path="/cart"
-    element={<CartPage cart={cart} removeFromCart={removeFromCart}/>}
   />
 </Routes>
   </div>
