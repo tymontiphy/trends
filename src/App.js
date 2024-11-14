@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 //import Navbar from './components/Navbar';
 import ClothingItem from './components/Clothingitem';
-import CartPage from './components/CartPage';
+import CartPage from './components/Cartpage';
 
 function App() {
   const [clothes, setClothes] = useState([]);
@@ -82,7 +82,7 @@ return matchesSearchQuery && matchesSize && matchesGender && matchesPrice;
   />
   <Route
     path="/cart"
-    element={<CartPage cart={cart} removeFromCart={removeFromCart} />}
+    element={<CartPage cart={cart} removeFromCart={removeFromCart}/>}
   />
 </Routes>
   </div>
