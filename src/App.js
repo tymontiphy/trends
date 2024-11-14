@@ -1,9 +1,8 @@
-	
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
+//import Navbar from './components/Navbar';
 import ClothingItem from './components/Clothingitem';
-import './components/Navbar.css';
+import CartPage from './components/CartPage';
 
 function App() {
   const [clothes, setClothes] = useState([]);
@@ -54,34 +53,38 @@ return matchesSearchQuery && matchesSize && matchesGender && matchesPrice;
     <Router>
       <div style={{ backgroundColor: '#E5AA70', minHeight: '100vh', padding: '20px' }}>
         {/* Pass setGenderFilter and other functions to Navbar */}
-        <Navbar
+        {/* <Navbar
           setSearchQuery={setSearchQuery}
           setSizeFilter={setSizeFilter}
           setPriceFilter={setPriceFilter}
           setGenderFilter={setGenderFilter}
           cart={cart}
-        />
+        /> */}
 
-    {/* Routes */}
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <div>
-            <h2>Trendy Clothes</h2>
-            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-              {filteredClothes.length > 0 ? (
-                filteredClothes.map((item) => (
-                  <ClothingItem key={item.id} item={item} addToCart={addToCart} />
-                ))
-              ) : (
-                <p>No items match your filter criteria.</p>
-              )}
-            </div>
-          </div>
-        }
-      />
-    </Routes>
+{/* Routes */}
+<Routes>
+  <Route
+    path="/"
+    element={
+      <div>
+        <h2>Trendy Clothes</h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+          {filteredClothes.length > 0 ? (
+            filteredClothes.map((item) => (
+              <ClothingItem key={item.id} item={item} addToCart={addToCart} />
+            ))
+          ) : (
+            <p>No items match your filter criteria.</p>
+          )}
+        </div>
+      </div>
+    }
+  />
+  <Route
+    path="/cart"
+    element={<CartPage cart={cart} removeFromCart={removeFromCart} />}
+  />
+</Routes>
   </div>
 </Router>
   );
