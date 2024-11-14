@@ -2,7 +2,7 @@ import React from 'react';
 
 function ClothingItem({ item, addToCart }) {
   return (
-    <div className="clothing-item">
+    <div style={{ border: '1px solid #ccc', padding: '10px', margin: '10px', width: '200px' }}>
       <img src={item.image} alt={item.name} style={{ width: '100px', height: '150px' }} />
       <h4>{item.name}</h4>
       <p>Price: ${item.price}</p>

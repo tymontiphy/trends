@@ -1,5 +1,5 @@
 import React from 'react';
-import ClothingItem from './ClothingItem';
+import ClothingItem from './Clothingitem';
 
 function ClothingList({ clothes, addToCart }) {
   return (
