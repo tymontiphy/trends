@@ -16,4 +16,3 @@ function ClothingList({ clothes, addToCart }) {
 }
 
 export default ClothingList;
-

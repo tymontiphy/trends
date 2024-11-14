@@ -1,14 +1,15 @@
-
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
 import ClothingItem from './components/Clothingitem';
-import CartPage from './components/CartPage';
-import CheckoutPage from './components/CheckoutPage';
-import './components/Navbar.css';
+
 function App() {
   const [clothes, setClothes] = useState([]);
   const [cart, setCart] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sizeFilter, setSizeFilter] = useState('');
+  const [priceFilter, setPriceFilter] = useState([0, 100]);
+  const [genderFilter, setGenderFilter] = useState('');
+
   // Fetch clothes data from json-server
   useEffect(() => {
     fetch('http://localhost:3000/clothes')
@@ -26,29 +27,29 @@ function App() {
           : clothingItem
       );
       setClothes(updatedClothes);
-  
+
       // Add the item to the cart
       setCart([...cart, item]);
     }
   };
 
-  // Remove item from cart
   const removeFromCart = (itemId) => {
     setCart(cart.filter((item) => item.id !== itemId));
   };
 
-  // Clear cart
-  const clearCart = () => {
-    setCart([]);
-  };
+  // Filter clothes based on filters and search query
+  const filteredClothes = clothes.filter((item) => {
+    const matchesSearchQuery = item.name.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSize = sizeFilter ? item.size === sizeFilter : true;
+    const matchesGender = genderFilter ? item.gender === genderFilter : true;
+    const matchesPrice = item.price >= priceFilter[0] && item.price <= priceFilter[1];
+
+    return matchesSearchQuery && matchesSize && matchesGender && matchesPrice;
+  });
 
   return (
     <Router>
-      <div>
-        {/* Navbar */}
-        <Navbar cart={cart} />
-        
-        {/* Routes */}
+      <div style={{ backgroundColor: '#E5AA70', minHeight: '100vh', padding: '20px' }}>
         <Routes>
           <Route
             path="/"
@@ -56,20 +57,20 @@ function App() {
               <div>
                 <h2>Trending Clothes</h2>
                 <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-                  {clothes.map((item) => (
-                    <ClothingItem key={item.id} item={item} addToCart={addToCart} />
-                  ))}
+                  {filteredClothes.length > 0 ? (
+                    filteredClothes.map((item) => (
+                      <ClothingItem key={item.id} item={item} addToCart={addToCart} />
+                    ))
+                  ) : (
+                    <p>No items match your filter criteria.</p>
+                  )}
                 </div>
               </div>
             }
           />
           <Route
             path="/cart"
-            element={<CartPage cart={cart} removeFromCart={removeFromCart} clearCart={clearCart} />}
-          />
-          <Route
-            path="/checkout"
-            element={<CheckoutPage clearCart={clearCart} />}
+            
           />
         </Routes>
       </div>
