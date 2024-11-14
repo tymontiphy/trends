@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ClothingItem from './components/Clothingitem';
 import CartPage from './components/Cartpage';
-import "./components/Navbar.css"
+import CheckoutPage from './components/Checkoutpage';
+import "./components/Navbar.css";
 
 function App() {
   const [clothes, setClothes] = useState([]);
@@ -31,13 +32,17 @@ function App() {
       );
       setClothes(updatedClothes);
 
-  // Add the item to the cart
-  setCart([...cart, item]);
-}
+      // Add the item to the cart
+      setCart([...cart, item]);
+    }
   };
 
   const removeFromCart = (itemId) => {
     setCart(cart.filter((item) => item.id !== itemId));
+  };
+
+  const clearCart = () => {
+    setCart([]); // Clear the cart after purchase
   };
 
   // Filter clothes based on filters and search query
@@ -47,7 +52,7 @@ function App() {
     const matchesGender = genderFilter ? item.gender === genderFilter : true;
     const matchesPrice = item.price >= priceFilter[0] && item.price <= priceFilter[1];
 
-return matchesSearchQuery && matchesSize && matchesGender && matchesPrice;
+    return matchesSearchQuery && matchesSize && matchesGender && matchesPrice;
   });
 
   return (
@@ -62,32 +67,36 @@ return matchesSearchQuery && matchesSize && matchesGender && matchesPrice;
           cart={cart}
         />
 
-{/* Routes */}
-<Routes>
-  <Route
-    path="/"
-    element={
-      <div>
-        <h2>Trendy Clothes</h2>
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-          {filteredClothes.length > 0 ? (
-            filteredClothes.map((item) => (
-              <ClothingItem key={item.id} item={item} addToCart={addToCart} />
-            ))
-          ) : (
-            <p>No items match your filter criteria.</p>
-          )}
-        </div>
+        {/* Routes */}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div>
+                <h2>Trendy Clothes</h2>
+                <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                  {filteredClothes.length > 0 ? (
+                    filteredClothes.map((item) => (
+                      <ClothingItem key={item.id} item={item} addToCart={addToCart} />
+                    ))
+                  ) : (
+                    <p>No items match your filter criteria.</p>
+                  )}
+                </div>
+              </div>
+            }
+          />
+          <Route
+            path="/cart"
+            element={<CartPage cart={cart} removeFromCart={removeFromCart} clearCart={clearCart} />}
+          />
+          <Route
+            path="/checkout"
+            element={<CheckoutPage cart={cart} clearCart={clearCart} />} // Pass cart and clearCart
+          />
+        </Routes>
       </div>
-    }
-  />
-  <Route
-    path="/cart"
-    element={<CartPage cart={cart} removeFromCart={removeFromCart}/>}
-  />
-</Routes>
-  </div>
-</Router>
+    </Router>
   );
 }
 
