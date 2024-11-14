@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-//import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
 import ClothingItem from './components/Clothingitem';
 import CartPage from './components/Cartpage';
+import "./components/Navbar.css"
 
 function App() {
   const [clothes, setClothes] = useState([]);
@@ -53,13 +54,13 @@ return matchesSearchQuery && matchesSize && matchesGender && matchesPrice;
     <Router>
       <div style={{ backgroundColor: '#E5AA70', minHeight: '100vh', padding: '20px' }}>
         {/* Pass setGenderFilter and other functions to Navbar */}
-        {/* <Navbar
+        <Navbar
           setSearchQuery={setSearchQuery}
           setSizeFilter={setSizeFilter}
           setPriceFilter={setPriceFilter}
           setGenderFilter={setGenderFilter}
           cart={cart}
-        /> */}
+        />
 
 {/* Routes */}
 <Routes>
