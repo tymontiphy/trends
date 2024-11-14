@@ -1,6 +1,9 @@
+	
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import ClothingItem from './components/Clothingitem';
+import './components/Navbar.css';
 
 function App() {
   const [clothes, setClothes] = useState([]);
@@ -28,9 +31,9 @@ function App() {
       );
       setClothes(updatedClothes);
 
-      // Add the item to the cart
-      setCart([...cart, item]);
-    }
+  // Add the item to the cart
+  setCart([...cart, item]);
+}
   };
 
   const removeFromCart = (itemId) => {
@@ -44,37 +47,43 @@ function App() {
     const matchesGender = genderFilter ? item.gender === genderFilter : true;
     const matchesPrice = item.price >= priceFilter[0] && item.price <= priceFilter[1];
 
-    return matchesSearchQuery && matchesSize && matchesGender && matchesPrice;
+return matchesSearchQuery && matchesSize && matchesGender && matchesPrice;
   });
 
   return (
     <Router>
       <div style={{ backgroundColor: '#E5AA70', minHeight: '100vh', padding: '20px' }}>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <div>
-                <h2>Trending Clothes</h2>
-                <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-                  {filteredClothes.length > 0 ? (
-                    filteredClothes.map((item) => (
-                      <ClothingItem key={item.id} item={item} addToCart={addToCart} />
-                    ))
-                  ) : (
-                    <p>No items match your filter criteria.</p>
-                  )}
-                </div>
-              </div>
-            }
-          />
-          <Route
-            path="/cart"
-            
-          />
-        </Routes>
-      </div>
-    </Router>
+        {/* Pass setGenderFilter and other functions to Navbar */}
+        <Navbar
+          setSearchQuery={setSearchQuery}
+          setSizeFilter={setSizeFilter}
+          setPriceFilter={setPriceFilter}
+          setGenderFilter={setGenderFilter}
+          cart={cart}
+        />
+
+    {/* Routes */}
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <div>
+            <h2>Trendy Clothes</h2>
+            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+              {filteredClothes.length > 0 ? (
+                filteredClothes.map((item) => (
+                  <ClothingItem key={item.id} item={item} addToCart={addToCart} />
+                ))
+              ) : (
+                <p>No items match your filter criteria.</p>
+              )}
+            </div>
+          </div>
+        }
+      />
+    </Routes>
+  </div>
+</Router>
   );
 }
 
