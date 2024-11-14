@@ -8,6 +8,7 @@ function ClothingItem({ item, addToCart }) {
       <p>Price: ${item.price}</p>
       <p>Size: {item.size}</p>
       <p>Stock: {item.stock > 0 ? item.stock : 'Out of Stock'}</p>
+      <p>Gender: {item.gender}</p>
       <button onClick={() => addToCart(item)} disabled={item.stock <= 0}>
         {item.stock > 0 ? "Add to Cart" : "Out of Stock"}
       </button>
